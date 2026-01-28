@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Solvna | Onesie - 1p card games</title>
+<meta name="author" content="Pedro Fontoura">
+<meta name="designer" content="Pedro Fontoura">
+<link rel="help" href="http://lado-de-la.nocturno.org/onesie/">
+<meta name="generator" content="Onesie Suite">
+<link rel="manifest" href="./assets/manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Onesie">
+<link rel="apple-touch-icon" href="./assets/onesie.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,minimum-scale=1,maximum-scale=1">
+<link rel="icon" type="image/svg+xml" href="./assets/onesie.svg">
+<link rel="stylesheet" href="./css/index.css">
+<base target="_blank">
+<script type="importmap">
+{
+            "imports": {
+                "glMatrix"      : "./lib/common.js",
+                "vec2"          : "./lib/vec2.js",
+                "stampit"       : "./lib/stampit.js"
+            }
+        }
+</script>
+<script type="module">globalThis.DEV=new URLSearchParams(window.location.search).has("dev"),console.log("» Document:",document.title);import{BUNDLE_URL,BUNDLE_ID,Solvna}from"./bundle_min.js";function Init(){console.log("» BUNDLE_URL:",BUNDLE_URL),console.log("» BUNDLE_ID:",BUNDLE_ID),console.log("» Init"),new Solvna(BUNDLE_ID)}document.addEventListener("DOMContentLoaded",Init)</script>
+</head>
+<body>
+<main id="AppViewport">
+<section id="Home" class="PageHidden">
+</section>
+<section id="Play" class="PageHidden">
+<section id="InGameInfo" class="Hidden">
+<p>
+Level:
+<span id="level"></span>
+</p>
+<p>
+Predictions:
+<span id="nr_predictions_ok">0</span>
+/
+<span id="nr_predictions">0</span>
+</p>
+<p>
+Intuition:
+<span id="success">0</span> %
+</p>
+<p>
+Completed:
+<span id="nr_completed">0</span>
+/
+<span id="nr_slots">--</span>
+</p>
+</section>
+</section>
+<section id="Stats" class="PageHidden">
+<h1>Stats</h1>
+<p class="Note">Not implemented yet.</p>
+</section>
+<section id="Info" class="PageHidden">
+<h1>Solvna</h1>
+<div class="SingleColumn">
+<p>From the game designer:</p>
+<blockquote>
+<p>
+<a href="https://boardgamegeek.com/thread/3615827/soluna-a-solo-divination-game-2025-traditional-dec">Soluna</a> is a single player divination game, using cards 1 to 6 from a traditional deck. You must successfully complete eight predictions before the deck runs out or all options are blocked.
+</p>
+<p>
+It was designed to be distributed as an A4 zine, with rules and game board on either side. So far I only made a french version of this zine, that can be checked here. The whole zine has been put together without the use of a computer. All the texts were written with a typewriter, and the illustrations were sourced from an astrology books. Everything was put together with a copier.
+</p>
+<p>
+This game is a submission for the BGG's
+<a href="https://boardgamegeek.com/thread/3569158/2025-traditional-deck-game-design-contest-results">2025 Traditional Deck Game Design Contest</a>.
+</p>
+<p>
+Rules in english are
+<a href="https://docs.google.com/document/d/1ObbBUY16D7QLOFszxDibxyUg1GkfAK8pCTCa6-4vE1Y/edit?tab=t.0#heading=h.avtj39clj6ps">available here</a>.
+</p>
+<cite>&ndash; Jean-Baptiste Lévêque</cite>
+</blockquote>
+</div>
+</section>
+<section id="Settings" class="PageHidden">
+<h1>Settings</h1>
+<div class="TwoColumns">
+<div class="Column">
+<h2>Game settings</h2>
+<p class="Note">Not implemented yet.</p>
+<p class="Settings">
+<span>Game level</span>
+<input type="radio" id="game_level_1" name="settings_game_level" value="1">
+<label for="game_level_1">Easy</label>
+<input type="radio" id="game_level_2" name="settings_game_level" value="2" checked="checked">
+<label for="game_level_2">Normal</label>
+<input type="radio" id="game_level_3" name="settings_game_level" value="3">
+<label for="game_level_3">Hard</label>
+</p>
+</div>
+<div class="Column">
+<h2>General settings</h2>
+<p class="Note">Not implemented yet.</p>
+<p class="Settings">
+<span>Seed</span>
+<input type="radio" id="deck_seed_1" name="settings_deck_seed" value="1" checked="checked">
+<label for="deck_seed_1">Random</label>
+[ <span id="deck_seed"></span> ]
+</p>
+<p class="Settings">
+<span>Card theme</span>
+<input type="radio" id="card_theme_1" name="settings_card_theme" value="1" checked="checked">
+<label for="card_theme_1">Basic</label>
+<input type="radio" id="card_theme_2" name="settings_card_theme" value="2">
+<label for="card_theme_2">Vintage</label>
+<input type="radio" id="card_theme_3" name="settings_card_theme" value="3">
+<label for="card_theme_3">Modern</label>
+</p>
+<p class="Settings">
+<span>Card speed</span>
+<input type="radio" id="card_speed_1" name="settings_card_speed" value="1">
+<label for="card_speed_1">Slow</label>
+<input type="radio" id="card_speed_2" name="settings_card_speed" value="2" checked="checked">
+<label for="card_speed_2">Normal</label>
+<input type="radio" id="card_speed_3" name="settings_card_speed" value="3">
+<label for="card_speed_3">Fast</label>
+</p>
+<p class="Settings">
+<span>Sound</span>
+<input type="radio" id="sound_0" name="settings_sound" value="0" checked="checked">
+<label for="sound_0">Off</label>
+<input type="radio" id="sound_1" name="settings_sound" value="1">
+<label for="sound_1">On</label>
+</p>
+</div>
+</div>
+</section>
+<section id="KoFi" class="PageHidden">
+<h1>Ko-Fi</h1>
+<div class="TwoColumns">
+<div class="Column" id="KoFiTxt">
+<p>
+<span class="HighLight">Onesie &ndash; 1p card games</span>
+is a solo project built with ❤️ in Portugal. It is crafted during my free time using web tech and community assets, and the attentive (if occasionally distracting) guidance of my cat, Joker.
+</p>
+<p>
+The game is completely free to play. However, if you have enjoyed your time in the
+<span class="HighLight">Onesie</span> universe and want to keep the dev fueled (and the code flowing), you can toss a coffee my way:
+<a class="NoWrap" href="https://ko-fi.com/onesiesuite">ko-fi.com/onesiesuite</a>.
+</p>
+<p>
+I’ll add your name to the <span class="HighLight">Supporter’s Suite</span>
+to commemorate your contribution!
+</p>
+<p>
+I'd love to hear from you &mdash; just drop a note through the
+<a class="NoWrap" href="http://lado-de-la.nocturno.org/onesie/?page=email">Onesie contact form</a>
+and I'll get back to you.
+</p>
+<h3 class="DoubleHeight">
+Thank you for playing<br>and for being part of this journey.
+</h3>
+<p><cite>&ndash; Pedro Fontoura</cite></p>
+</div>
+<div class="Column">
+</div>
+</div>
+</section>
+<section id="AppRotate" class="PageHidden">
+Please<br>rotate your device.
+</section>
+<section id="AppError" class="PageHidden">
+<h1>The deck got out of my hands!</h1>
+<h3>Sorry about that.</h3>
+<div id="AppErrorInfo"></div>
+</section>
+<nav id="AppSideMenu" class="Hidden">
+<p id="AppSideMenuMain" class="AppSideMenuBtn">
+<svg><use href="#icon-menu-grid"></use></svg>
+</p>
+<div id="AppSideMenuGroup" class="Hidden">
+<p class="AppSideMenuBtn">
+<svg><use href="#icon-home"></use></svg>
+</p>
+<p class="AppSideMenuBtn">
+<svg><use href="#icon-info"></use></svg>
+</p>
+<p class="AppSideMenuBtn">
+<svg><use href="#icon-play"></use></svg>
+</p>
+<p class="AppSideMenuBtn">
+<svg><use href="#icon-help"></use></svg>
+</p>
+<p class="AppSideMenuBtn">
+<svg><use href="#icon-stats"></use></svg>
+</p>
+<p class="AppSideMenuBtn">
+<svg><use href="#icon-kofi"></use></svg>
+</p>
+<p class="AppSideMenuBtn">
+<svg><use href="#icon-email"></use></svg>
+</p>
+<p class="AppSideMenuBtn">
+<svg><use href="#icon-settings"></use></svg>
+</p>
+</div>
+</nav>
+</main>
+</body>
+</html>
