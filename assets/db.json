@@ -10,7 +10,8 @@
         "scoundrel" : {
             "title" : "Scoundrel",
             "designer" : "Kurt Bieg and Zach Gage",
-            "description" : "A solo dungeon-crawler played with a standard deck of cards."
+            "description" : "A solo dungeon-crawler played with a standard deck of cards.",
+            "url" : "scoundrel"
         }
     },
     
