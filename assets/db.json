@@ -5,24 +5,26 @@
             "designer" : "Jean-Baptiste Lévêque",
             "description" : "A single player divination game, using cards 1 to 6 from a traditional deck.",
             "url" : "solvna"
+        },
+
+        "scoundrel" : {
+            "title" : "Scoundrel",
+            "designer" : "Kurt Bieg and Zach Gage",
+            "description" : "A solo dungeon-crawler played with a standard deck of cards."
         }
     },
     
     "box" : {
-        "scoundrel" : {
-            "dev" : true,
-            "title" : "Scoundrel",
-            "designer" : "Kurt Bieg and Zach Gage",
-            "description" : "A solo dungeon-crawler played with a standard deck of cards."
-        },
 
         "lonely-hearts" : {
+            "dev" : false,
             "title" : "Lonely Hearts",
             "designer" : "Patrick Rael",
             "description" : "No one to play Hearts with? Try this solitaire version of the standard card game."
         },
 
         "card-capture" : {
+            "dev" : false,
             "title" : "Card Capture",
             "designer" : "Lucas Gentry",
             "description" : "A solo deckbuilder, using a single deck of standard playing cards."

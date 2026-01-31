@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Solvna | Onesie - 1p card games</title>
+<title>Scoundrel | Onesie - 1p card games</title>
 <meta name="author" content="Pedro Fontoura">
 <meta name="designer" content="Pedro Fontoura">
 <link rel="help" href="http://lado-de-la.nocturno.org/onesie/">
@@ -26,60 +26,48 @@
             }
         }
 </script>
-<script type="module">globalThis.DEV=new URLSearchParams(window.location.search).has("dev"),console.log("» Document:",document.title);import{BUNDLE_URL,BUNDLE_ID,Solvna}from"./bundle_min.js";function Init(){console.log("» Init"),new Solvna(BUNDLE_ID)}console.log("» BUNDLE_URL:",BUNDLE_URL),console.log("» BUNDLE_ID:",BUNDLE_ID),document.addEventListener("DOMContentLoaded",Init)</script>
+<script type="module">globalThis.DEV=new URLSearchParams(window.location.search).has("dev"),console.log("» Document:",document.title);import{BUNDLE_URL,BUNDLE_ID,Scoundrel}from"./bundle_min.js";function Init(){console.log("» Init"),new Scoundrel(BUNDLE_ID)}console.log("» BUNDLE_URL:",BUNDLE_URL),console.log("» BUNDLE_ID:",BUNDLE_ID),document.addEventListener("DOMContentLoaded",Init)</script>
 </head>
 <body>
 <main id="AppViewport">
 <section id="Home" class="PageHidden">
 </section>
 <section id="Play" class="PageHidden">
-<section id="InGameInfo" class="Hidden">
-<p>
-Level:
-<span id="level"></span>
+<div id="InGameInfo">
+<div id="IGI_HealthLeft"><p></p></div>
+<div id="IGI_Stats">
+<p id="health">&nbsp;</p>
+<p id="damage">&nbsp;</p>
+<p id="RunAndHeal">
+<span id="CanRun">R</span>
+<span id="CanHeal">H</span>
 </p>
-<p>
-Predictions:
-<span id="nr_predictions_ok">0</span>
-/
-<span id="nr_predictions">0</span>
-</p>
-<p>
-Intuition:
-<span id="success">0</span> %
-</p>
-<p>
-Completed:
-<span id="nr_completed">0</span>
-/
-<span id="nr_slots">--</span>
-</p>
-</section>
+</div>
+<div id="IGI_HealthRight"><p></p></div>
+</div>
 </section>
 <section id="Stats" class="PageHidden">
 <h1>Stats</h1>
 <p class="Note">Not implemented yet.</p>
 </section>
 <section id="Info" class="PageHidden">
-<h1>Solvna</h1>
+<h1>Scoundrel</h1>
 <div class="SingleColumn">
 <p>From the game designer:</p>
 <blockquote>
 <p>
-<a href="https://boardgamegeek.com/thread/3615827/soluna-a-solo-divination-game-2025-traditional-dec">Soluna</a> is a single player divination game, using cards 1 to 6 from a traditional deck. You must successfully complete eight predictions before the deck runs out or all options are blocked.
+<a href="https://boardgamegeek.com/boardgame/191095/scoundrel">Scoundrel</a> is a single player rogue-like card game for use with a standard deck of playing cards. It was developed by Zach Gage and Kurt Bieg.
 </p>
 <p>
-It was designed to be distributed as an A4 zine, with rules and game board on either side. So far I only made a french version of this zine, that can be checked here. The whole zine has been put together without the use of a computer. All the texts were written with a typewriter, and the illustrations were sourced from an astrology books. Everything was put together with a copier.
+All Jokers, red face cards, and red aces are removed from the deck. The remaining cards serve as monsters (spades and clubs), weapons (diamonds), and health potions (hearts) valued from 2–14 (with face cards being valued 11–14). The rooms of the dungeon are created by laying out cards in groups of four. Progress is made through the dungeon by resolving three of the four dungeon cards in each room. The fourth card serves as the foundation for a new room. Rooms can be deferred if needed, but never twice in a row — and the player will eventually need to come back to deferred rooms.
 </p>
 <p>
-This game is a submission for the BGG's
-<a href="https://boardgamegeek.com/thread/3569158/2025-traditional-deck-game-design-contest-results">2025 Traditional Deck Game Design Contest</a>.
+Weapons may be equipped to attack multiple monsters, as long as each defeated monster is of lower value than the last monster defeated with that same weapon. To attack a monster of higher value, a new weapon must be equipped. Monsters can also always be attacked barehanded, but this depletes the player's health for the full value of the monster. Health potions may be used to recover life points up to the maximum starting value of 20. Playing a second potion in succession nullifies the effect of the second potion.
 </p>
 <p>
-Rules in english are
-<a href="https://docs.google.com/document/d/1ObbBUY16D7QLOFszxDibxyUg1GkfAK8pCTCa6-4vE1Y/edit?tab=t.0#heading=h.avtj39clj6ps">available here</a>.
+The game ends in a loss when life points reach zero or in a victory if the player manages to clear all rooms of the dungeon.
 </p>
-<cite>&ndash; Jean-Baptiste Lévêque</cite>
+<cite>&ndash; Zach Gage and Kurt Bieg</cite>
 </blockquote>
 </div>
 </section>
@@ -90,13 +78,40 @@ Rules in english are
 <h2>Game settings</h2>
 <p class="Note">Not implemented yet.</p>
 <p class="Settings">
-<span>Game level</span>
-<input type="radio" id="game_level_1" name="settings_game_level" value="1">
-<label for="game_level_1">Easy</label>
-<input type="radio" id="game_level_2" name="settings_game_level" value="2" checked="checked">
-<label for="game_level_2">Normal</label>
-<input type="radio" id="game_level_3" name="settings_game_level" value="3">
-<label for="game_level_3">Hard</label>
+<span>Slay</span>
+<input type="radio" id="slay_1" name="settings_slay" value="1" checked="checked">
+<label for="slay_1">Less (default)</label>
+<input type="radio" id="slay_2" name="settings_slay" value="2">
+<label for="slay_2">Less or equal</label>
+</p>
+<p class="Settings">
+<span>Reds</span>
+<input type="radio" id="reds_1" name="settings_reds" value="1" checked="checked">
+<label for="reds_1">10 (default)</label>
+<input type="radio" id="reds_2" name="settings_reds" value="2">
+<label for="reds_2">11</label>
+<input type="radio" id="reds_3" name="settings_reds" value="3">
+<label for="reds_2">12</label>
+<input type="radio" id="reds_4" name="settings_reds" value="4">
+<label for="reds_2">13</label>
+</p>
+<p class="Settings">
+<span>Bombs</span>
+<input type="radio" id="bombs_1" name="settings_bombs" value="0" checked="checked">
+<label for="bombs_1">0 (default)</label>
+<input type="radio" id="bombs_2" name="settings_bombs" value="1">
+<label for="bombs_2">1</label>
+<input type="radio" id="bombs_3" name="settings_bombs" value="2">
+<label for="bombs_2">2</label>
+</p>
+<p class="Settings">
+<span>Grenades</span>
+<input type="radio" id="grenades_1" name="settings_grenades" value="0" checked="checked">
+<label for="grenades_1">0 (default)</label>
+<input type="radio" id="grenades_2" name="settings_grenades" value="1">
+<label for="grenades_2">1</label>
+<input type="radio" id="grenades_3" name="settings_grenades" value="2">
+<label for="grenades_2">2</label>
 </p>
 </div>
 <div class="Column">

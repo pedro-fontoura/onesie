@@ -1,0 +1,31 @@
+{
+  "short_name": "Solvna",
+  "name": "Solvna | Onesie Suite",
+  "icons": [
+    {
+      "src": "onesie.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "onesie.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "onesie.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "../?source=pwa",
+  "display": "fullscreen",
+  "display_override": ["window-controls-overlay", "minimal-ui"],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "scope": "/",
+  "background_color": "LightSlateGray",
+  "theme_color": "LightSlateGray"
+}
