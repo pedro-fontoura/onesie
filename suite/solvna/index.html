@@ -17,6 +17,7 @@
 <link rel="icon" type="image/svg+xml" href="./assets/onesie.svg">
 <link rel="stylesheet" href="./css/index.css">
 <base target="_blank">
+<script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
 <script type="importmap">
 {
             "imports": {
@@ -89,50 +90,12 @@ Rules in english are
 <div class="Column">
 <h2>Game settings</h2>
 <p class="Note">Not implemented yet.</p>
-<p class="Settings">
-<span>Game level</span>
-<input type="radio" id="game_level_1" name="settings_game_level" value="1">
-<label for="game_level_1">Easy</label>
-<input type="radio" id="game_level_2" name="settings_game_level" value="2" checked="checked">
-<label for="game_level_2">Normal</label>
-<input type="radio" id="game_level_3" name="settings_game_level" value="3">
-<label for="game_level_3">Hard</label>
-</p>
+<div id="GameSettings"></div>
 </div>
 <div class="Column">
 <h2>General settings</h2>
 <p class="Note">Not implemented yet.</p>
-<p class="Settings">
-<span>Seed</span>
-<input type="radio" id="deck_seed_1" name="settings_deck_seed" value="1" checked="checked">
-<label for="deck_seed_1">Random</label>
-[ <span id="deck_seed"></span> ]
-</p>
-<p class="Settings">
-<span>Card theme</span>
-<input type="radio" id="card_theme_1" name="settings_card_theme" value="1" checked="checked">
-<label for="card_theme_1">Basic</label>
-<input type="radio" id="card_theme_2" name="settings_card_theme" value="2">
-<label for="card_theme_2">Vintage</label>
-<input type="radio" id="card_theme_3" name="settings_card_theme" value="3">
-<label for="card_theme_3">Modern</label>
-</p>
-<p class="Settings">
-<span>Card speed</span>
-<input type="radio" id="card_speed_1" name="settings_card_speed" value="1">
-<label for="card_speed_1">Slow</label>
-<input type="radio" id="card_speed_2" name="settings_card_speed" value="2" checked="checked">
-<label for="card_speed_2">Normal</label>
-<input type="radio" id="card_speed_3" name="settings_card_speed" value="3">
-<label for="card_speed_3">Fast</label>
-</p>
-<p class="Settings">
-<span>Sound</span>
-<input type="radio" id="sound_0" name="settings_sound" value="0" checked="checked">
-<label for="sound_0">Off</label>
-<input type="radio" id="sound_1" name="settings_sound" value="1">
-<label for="sound_1">On</label>
-</p>
+<div id="GeneralSettings"></div>
 </div>
 </div>
 </section>
