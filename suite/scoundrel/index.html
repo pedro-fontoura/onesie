@@ -17,6 +17,7 @@
 <link rel="icon" type="image/svg+xml" href="./assets/onesie.svg">
 <link rel="stylesheet" href="./css/index.css">
 <base target="_blank">
+<script src="https://cdn.jsdelivr.net/npm/counterapi/dist/counter.browser.min.js"></script>
 <script type="importmap">
 {
             "imports": {
@@ -48,7 +49,6 @@
 </section>
 <section id="Stats" class="PageHidden">
 <h1>Stats</h1>
-<p class="Note">Not implemented yet.</p>
 </section>
 <section id="Info" class="PageHidden">
 <h1>Scoundrel</h1>
@@ -76,78 +76,13 @@ The game ends in a loss when life points reach zero or in a victory if the playe
 <div class="TwoColumns">
 <div class="Column">
 <h2>Game settings</h2>
-<p class="Note">Not implemented yet.</p>
-<p class="Settings">
-<span>Slay</span>
-<input type="radio" id="slay_1" name="settings_slay" value="1" checked="checked">
-<label for="slay_1">Less (default)</label>
-<input type="radio" id="slay_2" name="settings_slay" value="2">
-<label for="slay_2">Less or equal</label>
-</p>
-<p class="Settings">
-<span>Reds</span>
-<input type="radio" id="reds_1" name="settings_reds" value="1" checked="checked">
-<label for="reds_1">10 (default)</label>
-<input type="radio" id="reds_2" name="settings_reds" value="2">
-<label for="reds_2">11</label>
-<input type="radio" id="reds_3" name="settings_reds" value="3">
-<label for="reds_2">12</label>
-<input type="radio" id="reds_4" name="settings_reds" value="4">
-<label for="reds_2">13</label>
-</p>
-<p class="Settings">
-<span>Bombs</span>
-<input type="radio" id="bombs_1" name="settings_bombs" value="0" checked="checked">
-<label for="bombs_1">0 (default)</label>
-<input type="radio" id="bombs_2" name="settings_bombs" value="1">
-<label for="bombs_2">1</label>
-<input type="radio" id="bombs_3" name="settings_bombs" value="2">
-<label for="bombs_2">2</label>
-</p>
-<p class="Settings">
-<span>Grenades</span>
-<input type="radio" id="grenades_1" name="settings_grenades" value="0" checked="checked">
-<label for="grenades_1">0 (default)</label>
-<input type="radio" id="grenades_2" name="settings_grenades" value="1">
-<label for="grenades_2">1</label>
-<input type="radio" id="grenades_3" name="settings_grenades" value="2">
-<label for="grenades_2">2</label>
-</p>
+<p class="Note">Not functional yet.</p>
+<div id="GameSettings"></div>
 </div>
 <div class="Column">
 <h2>General settings</h2>
-<p class="Note">Not implemented yet.</p>
-<p class="Settings">
-<span>Seed</span>
-<input type="radio" id="deck_seed_1" name="settings_deck_seed" value="1" checked="checked">
-<label for="deck_seed_1">Random</label>
-[ <span id="deck_seed"></span> ]
-</p>
-<p class="Settings">
-<span>Card theme</span>
-<input type="radio" id="card_theme_1" name="settings_card_theme" value="1" checked="checked">
-<label for="card_theme_1">Basic</label>
-<input type="radio" id="card_theme_2" name="settings_card_theme" value="2">
-<label for="card_theme_2">Vintage</label>
-<input type="radio" id="card_theme_3" name="settings_card_theme" value="3">
-<label for="card_theme_3">Modern</label>
-</p>
-<p class="Settings">
-<span>Card speed</span>
-<input type="radio" id="card_speed_1" name="settings_card_speed" value="1">
-<label for="card_speed_1">Slow</label>
-<input type="radio" id="card_speed_2" name="settings_card_speed" value="2" checked="checked">
-<label for="card_speed_2">Normal</label>
-<input type="radio" id="card_speed_3" name="settings_card_speed" value="3">
-<label for="card_speed_3">Fast</label>
-</p>
-<p class="Settings">
-<span>Sound</span>
-<input type="radio" id="sound_0" name="settings_sound" value="0" checked="checked">
-<label for="sound_0">Off</label>
-<input type="radio" id="sound_1" name="settings_sound" value="1">
-<label for="sound_1">On</label>
-</p>
+<p class="Note">Not functional yet.</p>
+<div id="GeneralSettings"></div>
 </div>
 </div>
 </section>
