@@ -6,7 +6,6 @@
             "description" : "A single player divination game, using cards 1 to 6 from a traditional deck.",
             "url" : "solvna",
             "notify": [
-                "Game levels avaliable."
             ]
         },
 
