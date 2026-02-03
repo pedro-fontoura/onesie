@@ -21,13 +21,13 @@
 <script type="importmap">
 {
             "imports": {
-                "glMatrix"      : "./lib/common.js",
-                "vec2"          : "./lib/vec2.js",
-                "stampit"       : "./lib/stampit.js"
+                "glMatrix"      : "/toolbox/gl-matrix/common.js",
+                "vec2"          : "/toolbox/gl-matrix/vec2.js",
+                "stampit"       : "/toolbox/stampit/stampit.js"
             }
         }
 </script>
-<script type="module">globalThis.DEV=new URLSearchParams(window.location.search).has("dev"),console.log("» Document:",document.title);import{BUNDLE_URL,BUNDLE_ID,Solvna}from"./bundle_min.js";function Init(){console.log("» Init"),new Solvna(BUNDLE_ID)}console.log("» BUNDLE_URL:",BUNDLE_URL),console.log("» BUNDLE_ID:",BUNDLE_ID),document.addEventListener("DOMContentLoaded",Init)</script>
+<script type="module">globalThis.DEV=new URLSearchParams(window.location.search).has("dev"),console.log("» Document:",document.title),console.log("» Dev:",globalThis.DEV);import{BUNDLE_URL,BUNDLE_ID,Solvna}from"./bundle_min.js";function Init(){console.log("» Init"),new Solvna(BUNDLE_ID)}console.log("» BUNDLE_URL:",BUNDLE_URL),console.log("» BUNDLE_ID:",BUNDLE_ID),document.addEventListener("DOMContentLoaded",Init)</script>
 </head>
 <body>
 <main id="AppViewport">
@@ -89,7 +89,6 @@ Rules in english are
 <div class="TwoColumns">
 <div class="Column">
 <h2>Game settings</h2>
-<p class="Note">Not implemented yet.</p>
 <div id="GameSettings"></div>
 </div>
 <div class="Column">
