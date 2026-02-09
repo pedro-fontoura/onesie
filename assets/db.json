@@ -15,6 +15,13 @@
             "designer" : "Kurt Bieg and Zach Gage",
             "description" : "A solo dungeon-crawler played with a standard deck of cards.",
             "url" : "scoundrel"
+        },
+
+        "farmer" : {
+            "title" : "The farmer and the deal",
+            "designer" : "Matt Hanna",
+            "description" : "Care for crops popping out of your deck and earn enough diamonds to keep your farm!",
+            "url" : "farmer"
         }
     },
     
