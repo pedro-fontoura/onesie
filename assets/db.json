@@ -1,13 +1,10 @@
 {
     "table" : {
-        "solvna" : {
-            "title" : "Solvna",
-            "designer" : "Jean-Baptiste Lévêque",
-            "description" : "A single player divination game, using cards 1 to 6 from a traditional deck.",
-            "url" : "solvna",
-            "notify": [
-                "Game levels avaliable."
-            ]
+        "farmer" : {
+            "title" : "The farmer and the deal",
+            "designer" : "Matt Hanna",
+            "description" : "Care for crops popping out of your deck and earn enough diamonds to keep your farm!",
+            "url" : "farmer"
         },
 
         "scoundrel" : {
@@ -17,28 +14,32 @@
             "url" : "scoundrel"
         },
 
-        "farmer" : {
-            "title" : "The farmer and the deal",
-            "designer" : "Matt Hanna",
-            "description" : "Care for crops popping out of your deck and earn enough diamonds to keep your farm!",
-            "url" : "farmer"
+        "solvna" : {
+            "title" : "Solvna",
+            "designer" : "Jean-Baptiste Lévêque",
+            "description" : "A single player divination game, using cards 1 to 6 from a traditional deck.",
+            "url" : "solvna",
+            "notify": [
+                "Game levels avaliable."
+            ]
         }
+
     },
     
     "box" : {
+        "card-capture" : {
+            "dev" : false,
+            "title" : "Card Capture",
+            "designer" : "Lucas Gentry",
+            "description" : "A solo deckbuilder, using a single deck of standard playing cards."
+        },
 
         "lonely-hearts" : {
             "dev" : false,
             "title" : "Lonely Hearts",
             "designer" : "Patrick Rael",
             "description" : "No one to play Hearts with? Try this solitaire version of the standard card game."
-        },
-
-        "card-capture" : {
-            "dev" : false,
-            "title" : "Card Capture",
-            "designer" : "Lucas Gentry",
-            "description" : "A solo deckbuilder, using a single deck of standard playing cards."
         }
+
     }
 }
