@@ -32,14 +32,6 @@
             "title" : "Card Capture",
             "designer" : "Lucas Gentry",
             "description" : "A solo deckbuilder, using a single deck of standard playing cards."
-        },
-
-        "lonely-hearts" : {
-            "dev" : false,
-            "title" : "Lonely Hearts",
-            "designer" : "Patrick Rael",
-            "description" : "No one to play Hearts with? Try this solitaire version of the standard card game."
         }
-
     }
 }
