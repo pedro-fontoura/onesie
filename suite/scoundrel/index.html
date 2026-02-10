@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-<title>Farmer | Onesie - 1p card games</title>
+<title>Scoundrel | Onesie - 1p card games</title>
 <meta name="author" content="Pedro Fontoura">
 <meta name="designer" content="Pedro Fontoura">
 <link rel="help" href="https://pedro-fontoura.github.io/onesie/">
@@ -27,7 +27,7 @@
             }
         }
 </script>
-<script type="module">globalThis.DEV=new URLSearchParams(window.location.search).has("dev"),console.log("» Document:",document.title),console.log("» Dev:",globalThis.DEV);import{BUNDLE_URL,BUNDLE_ID,Farmer}from"./bundle_min.js";function Init(){console.log("» Init"),new Farmer(BUNDLE_ID)}console.log("» BUNDLE_URL:",BUNDLE_URL),console.log("» BUNDLE_ID:",BUNDLE_ID),document.addEventListener("DOMContentLoaded",Init)</script>
+<script type="module">globalThis.DEV=new URLSearchParams(window.location.search).has("dev"),console.log("» Document:",document.title),console.log("» Dev:",globalThis.DEV);import{BUNDLE_URL,BUNDLE_ID,Scoundrel}from"./bundle_min.js";function Init(){console.log("» Init"),new Scoundrel(BUNDLE_ID)}console.log("» BUNDLE_URL:",BUNDLE_URL),console.log("» BUNDLE_ID:",BUNDLE_ID),document.addEventListener("DOMContentLoaded",Init)</script>
 </head>
 <body>
 <main id="AppViewport">
@@ -35,10 +35,16 @@
 </section>
 <section id="Play" class="PageHidden">
 <div id="InGameInfo">
-<div class="cover">
-<p id="payment"></p>
-<p class="small"><span id="season">0</span> / 2</p>
+<div id="IGI_HealthLeft"><p></p></div>
+<div id="IGI_Stats">
+<p id="health">&nbsp;</p>
+<p id="damage">&nbsp;</p>
+<p id="RunAndHeal">
+<span id="CanRun">R</span>
+<span id="CanHeal">H</span>
+</p>
 </div>
+<div id="IGI_HealthRight"><p></p></div>
 </div>
 </section>
 <section id="Stats" class="PageHidden">
@@ -46,22 +52,23 @@
 <p class="Note">Personal stats: not implemented yet.</p>
 </section>
 <section id="Info" class="PageHidden">
-<h1>Farmer</h1>
+<h1>Scoundrel</h1>
 <div class="SingleColumn">
 <p>From the game designer:</p>
 <blockquote>
 <p>
-<a href="https://boardgamegeek.com/boardgame/367446/the-farmer-and-the-deal">The Farmer and the Deal</a>
-</p><p>
-The old farm owner at the farm you used to work at has agreed to rent out a bit of land to you at a discount. As part of the deal you must also provide produce for the restaurant he has an agreement with and provide some compost for the old farmer later in the year.
+<a href="https://boardgamegeek.com/boardgame/191095/scoundrel">Scoundrel</a> is a single player rogue-like card game for use with a standard deck of playing cards. It was developed by Zach Gage and Kurt Bieg.
 </p>
 <p>
-In this solitaire standard deck card game, the player holds the deck sideways in their hand while placing cards sticking vertically out of the deck to dig plots (spades), plant seeds (clubs), care for crops (hearts), and finally sell them (diamonds) or compost them.
+All Jokers, red face cards, and red aces are removed from the deck. The remaining cards serve as monsters (spades and clubs), weapons (diamonds), and health potions (hearts) valued from 2–14 (with face cards being valued 11–14). The rooms of the dungeon are created by laying out cards in groups of four. Progress is made through the dungeon by resolving three of the four dungeon cards in each room. The fourth card serves as the foundation for a new room. Rooms can be deferred if needed, but never twice in a row — and the player will eventually need to come back to deferred rooms.
 </p>
 <p>
-Played over the course of 2 seasons (turns through the deck), the player must weigh choices carefully to ensure that they use their plots before they reach the top of the deck and don't discard too many of the cards they need to sell/compost enough to meet all the farmer's requirements.
+Weapons may be equipped to attack multiple monsters, as long as each defeated monster is of lower value than the last monster defeated with that same weapon. To attack a monster of higher value, a new weapon must be equipped. Monsters can also always be attacked barehanded, but this depletes the player's health for the full value of the monster. Health potions may be used to recover life points up to the maximum starting value of 20. Playing a second potion in succession nullifies the effect of the second potion.
 </p>
-<cite>&ndash; Matt Hanna</cite>
+<p>
+The game ends in a loss when life points reach zero or in a victory if the player manages to clear all rooms of the dungeon.
+</p>
+<cite>&ndash; Zach Gage and Kurt Bieg</cite>
 </blockquote>
 </div>
 </section>
