@@ -1,5 +1,13 @@
 {
     "table" : {
+        "card-capture" : {
+            "dev" : false,
+            "title" : "Card Capture",
+            "designer" : "Lucas Gentry",
+            "description" : "A solo deckbuilder, using a single deck of standard playing cards.",
+            "url" : "card-capture"
+        },
+
         "farmer" : {
             "title" : "The farmer and the deal",
             "designer" : "Matt Hanna",
@@ -30,13 +38,7 @@
     },
     
     "box" : {
-        "card-capture" : {
-            "dev" : false,
-            "title" : "Card Capture",
-            "designer" : "Lucas Gentry",
-            "description" : "A solo deckbuilder, using a single deck of standard playing cards."
-        },
-
+        
         "lonely-hearts" : {
             "dev" : false,
             "title" : "Lonely Hearts",
