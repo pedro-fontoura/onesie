@@ -1,7 +1,6 @@
 {
     "table" : {
         "card-capture" : {
-            "dev" : false,
             "title" : "Card Capture",
             "designer" : "Lucas Gentry",
             "description" : "A solo deckbuilder, using a single deck of standard playing cards.",
@@ -12,17 +11,17 @@
             "title" : "The farmer and the deal",
             "designer" : "Matt Hanna",
             "description" : "Care for crops popping out of your deck and earn enough diamonds to keep your farm!",
-            "url" : "farmer"
+            "url" : "farmer",
+            "notify": [
+                "Win now correctly validated"
+            ]
         },
 
         "scoundrel" : {
             "title" : "Scoundrel",
             "designer" : "Kurt Bieg and Zach Gage",
             "description" : "A solo dungeon-crawler played with a standard deck of cards.",
-            "url" : "scoundrel",
-            "notify": [
-                "Corrected: RUN was allowed under invalid conditions."
-            ]
+            "url" : "scoundrel"
         },
 
         "solvna" : {
@@ -38,7 +37,6 @@
     },
     
     "box" : {
-        
         "lonely-hearts" : {
             "dev" : false,
             "title" : "Lonely Hearts",
